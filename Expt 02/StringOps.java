@@ -13,7 +13,9 @@ public class StringOps {
             System.out.println("3. Convert to lowercase");
             System.out.println("4. Find string length");
             System.out.println("5. Check if string is empty");
-            System.out.println("6. Exit");
+            System.out.println("6. Concatenate two strings");
+            System.out.println("7. Split a string");
+            System.out.println("8. Exit");
             System.out.print("Enter your choice: ");
             
             int choice = scanner.nextInt();
@@ -49,7 +51,25 @@ public class StringOps {
                         System.out.println("The string is not empty.");
                     }
                     break;
-                case 6:
+                case 6: // Concatenation
+                    System.out.print("Enter the first string: ");
+                    String str1 = scanner.nextLine();
+                    System.out.print("Enter the second string: ");
+                    String str2 = scanner.nextLine();
+                    System.out.println("Concatenated string: " + str1.concat(str2));
+                    break;
+                case 7: // Splitting
+                    System.out.print("Enter a string to split: ");
+                    inputString = scanner.nextLine();
+                    System.out.print("Enter the delimiter: ");
+                    String delimiter = scanner.nextLine();
+                    String[] splitArray = inputString.split(delimiter);
+                    System.out.println("Split parts:");
+                    for (String part : splitArray) {
+                        System.out.println(part);
+                    }
+                    break;
+                case 8:
                     System.out.println("Exiting the program.");
                     scanner.close();
                     System.exit(0);
@@ -62,7 +82,6 @@ public class StringOps {
 
     // Method to reverse a string
     public static String reverseString(String str) {
-        StringBuilder reversed = new StringBuilder(str);
-        return reversed.reverse().toString();
+        return new StringBuilder(str).reverse().toString();
     }
 }
