@@ -23,7 +23,7 @@ public class Assignment3b {
     public static void main(String[] args) {
 
         Scanner scn = new Scanner(System.in);
-        System.out.println(" Select Choice \n 1 For Boy | 2 For Girl");
+        System.out.println(" Select Choice \n 1 For Boy | 2 For Girl | 3 For Exit");
         int choice = scn.nextInt();
         Person p;   //created ref of parent class
 
